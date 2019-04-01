@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<TITLE>Bank Search</TITLE>
+		<link rel="stylesheet" href="selectbox.css">
+		<link rel="stylesheet" href="table.css">
+		<link rel="stylesheet" href="bank.css">
+		
+	</head>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"> </script>
+	<script src="bank.js"> </script>
+	<body onload='fetcher()'>
+		City:<select id="soflow" onchange="retrieveData(this.value)">
+			<option>Select an Option</option>
+			<option id="D" value="D" > Delhi 		 </option>
+			<option id="K" value="K" > Kolkata 	 </option>
+			<option id="M" value="M" > Mumbai 	 </option>
+			<option id="H" value="H" > Hyderabad </option>
+			<option id="C" value="C" > Chennai   </option>
+		</select>
+		Branch: <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Your Branch.">
+		<br>
+
+		<p id="showData"></p>
+		<p id="NoData"></p> 
+	
+	</body>
+
+</html>
