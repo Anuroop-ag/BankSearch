@@ -21,6 +21,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/searchbar.css">
 
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
 	</head>
 	
@@ -41,26 +42,8 @@
 				</select>
 			</span>
 			
-			Branch -  <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Your Branch.">
-
-			<form class="search header__search">
-			  <input id="search-input" class="search__input input" type="text" name="search" value="" placeholder="Press enter to search or ESC to close">
-
-			  <button id="search-btn" type="submit" name="button" class="search__btn btn btn--icon-only">
-			      <span>Search</span>
-			      <div class="btn__container">
-			        <div class="btn__icon btn__icon--search" id="search-icon">
-			          <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-3 -3)" stroke="#fff" stroke-width="2" fill="none" fill-rule="evenodd"><circle cx="10" cy="10" r="6"></circle><path d="M14.412 14.412L20 20" stroke-linecap="round"></path></g></svg>
-			        </div>
-
-			        <div class="btn__icon btn__icon--circle" id="circle-icon">
-			          <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-			            <circle id="circle-path" stroke="#fff" stroke-width="10" cx="45" cy="45" r="40" fill="none" fill-rule="evenodd"/>
-			          </svg>
-			        </div>
-			      </div>
-			    </button>
-			</form>
+			Branch -  <input id="myInput" onkeyup="myFunction()" type="search" placeholder="Search Your Branch">
+			
 
 		</div>
 			
@@ -78,6 +61,10 @@
 	<script src="vendor_app/select2/select2.min.js"></script>
 
 	<script src="vendor_app/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.min.js"></script>
+	
+	
 
 
 	<script>
@@ -95,7 +82,7 @@
 	<script src="bank.js"> </script>
 
 	<script src="js/main.js"></script>
-	<script src="js/searchbar.js"></script>
+	<!-- <script src="js/searchbar.js"></script> -->
 
 	
 	</body>

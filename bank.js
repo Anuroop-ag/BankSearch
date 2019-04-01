@@ -41,6 +41,8 @@ function myFunction() {
 var count = 0;
 function fetcher(){
 	var loader = document.getElementById("loader");
+	document.getElementById("myInput").disabled=true;
+	document.getElementById('myInput').placeholder="Please select a city";
 
 	fetch("https://vast-shore-74260.herokuapp.com/banks?city=KOLKATA")
 		.then(res => res.json() )
@@ -243,23 +245,38 @@ function retrieveData(value){
 
 	if(value=="D"){
 		delhiData();
+		document.getElementById("myInput").disabled=false;
+		document.getElementById('myInput').placeholder="Search Your Branch";
+
 	}
 	if(value=="K"){
 		kolkataData();
 		//CreateTableFromJSON();
+		document.getElementById("myInput").disabled=false;
+		document.getElementById('myInput').placeholder="Search Your Branch";
+		
 	}
 
 	if(value=="M"){
 		mumbaiData();
+		document.getElementById("myInput").disabled=false;
+		document.getElementById('myInput').placeholder="Search Your Branch";
+		
 	}
 	
 	if(value=="C"){
 		chennaiData();
+		document.getElementById("myInput").disabled=false;
+		document.getElementById('myInput').placeholder="Search Your Branch";
+		
 	}
 	
 
 	if(value=="H"){
 		hydData();
+		document.getElementById("myInput").disabled=false;
+		document.getElementById('myInput').placeholder="Search Your Branch";
+		
 	}
 	
 

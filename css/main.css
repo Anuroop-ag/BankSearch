@@ -69,6 +69,9 @@ a:hover {
 /* ------------------------------------ */
 h1,h2,h3,h4,h5,h6 {margin: 0px;}
 
+#input-area{
+  font-family: 'Montserrat';
+}
 p {margin: 0px;}
 
 ul, li {
@@ -558,3 +561,23 @@ th, td {
 .table100.ver5 .ps__rail-y .ps__thumb-y::before {
   background-color: #cccccc;
 }
+
+/*---------------------------------------------*/
+
+#NoData{
+
+  margin-left: 400px;
+  font-family: 'Montserrat';
+  font-size:20px;
+}
+
+/*---------------------------------------------*/
+
+select{
+
+  
+    height: 40px;
+    width: 170px;
+    border: solid 1px #ccc;
+}
+
