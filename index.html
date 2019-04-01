@@ -2,29 +2,74 @@
 <html>
 	<head>
 		<TITLE>Bank Search</TITLE>
-		<link rel="stylesheet" href="selectbox.css">
-		<link rel="stylesheet" href="table.css">
-		<link rel="stylesheet" href="bank.css">
 		
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"> </script>
-	<script src="bank.js"> </script>
+	
+	
 	<body onload='fetcher()'>
-		City:<select id="soflow" onchange="retrieveData(this.value)">
-			<option>Select an Option</option>
-			<option id="D" value="D" > Delhi 		 </option>
-			<option id="K" value="K" > Kolkata 	 </option>
-			<option id="M" value="M" > Mumbai 	 </option>
-			<option id="H" value="H" > Hyderabad </option>
-			<option id="C" value="C" > Chennai   </option>
-		</select>
-		Branch: <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Your Branch.">
-		<br>
+		<div id="input-area">
+			<h1>Bank Search</h1>
+			<br>
+			<span style="padding-right: 15px">
+				City - <select id="soflow" onchange="retrieveData(this.value)">
+				<option>Select an Option</option>
+				<option id="D" value="D" > Delhi 		 </option>
+				<option id="K" value="K" > Kolkata 	 </option>
+				<option id="M" value="M" > Mumbai 	 </option>
+				<option id="H" value="H" > Hyderabad </option>
+				<option id="C" value="C" > Chennai   </option>
+				</select>
+			</span>
+			
+			Branch -  <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Your Branch.">
+		</div>
+			
 
-		<p id="showData"></p>
+		<div id="showData"></div>
 		<p id="NoData"></p> 
+		<div id="loader"><img src="loader.gif"></div>
+
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="vendor/select2/select2.min.js"></script>
+
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+
+	<script src="bank.js"> </script>
+
+	<script src="js/main.js"></script>
 	
 	</body>
 
